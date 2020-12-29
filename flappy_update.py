@@ -7,7 +7,7 @@ def draw_floor():
 def create_pipe():
 	random_pipe_pos = random.choice(pipe_height)
 	bottom_pipe = pipe_surface.get_rect(midtop = (700,random_pipe_pos))
-	top_pipe = pipe_surface.get_rect(midbottom = (700,random_pipe_pos - 300))
+	top_pipe = pipe_surface.get_rect(midbottom = (700,random_pipe_pos - 500))
 	return bottom_pipe,top_pipe
 
 def move_pipes(pipes):
@@ -81,6 +81,7 @@ def pipe_score_check():
 pygame.init()
 screen = pygame.display.set_mode((576,700))
 clock = pygame.time.Clock()
+pygame.display.set_caption('L Flappy Game')
 game_font=pygame.font.Font(pygame.font.get_default_font(), 40)
 
 # Game Variables
